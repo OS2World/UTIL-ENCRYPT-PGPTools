@@ -1,0 +1,6 @@
+; DLL with English ressources
+
+LIBRARY PGPTOOLS
+
+DESCRIPTION 'PGPTOOLS for OS/2 - English ressource DLL'
+

@@ -1,0 +1,36 @@
+!define BLANK ""
+f:\wc10src\pgptools\english\dll\dllbasee.obj : f:\wc10src\pgptools\dllbasee.&
+c .AUTODEPEND
+ @f:
+ cd f:\wc10src\pgptools\english\dll
+ *wcc386 ..\..\dllbasee.c -i=F:\WC\h;F:\WC\h\os2 -w4 -e25 -zq -otexan -bd -5&
+r -bt=os2 -mf
+
+f:\wc10src\pgptools\english\dll\pgptoole.res : f:\wc10src\pgptools\pgptoole.&
+rc .AUTODEPEND
+ @f:
+ cd f:\wc10src\pgptools\english\dll
+ rc -i $[: -i F:\WC\h -i F:\WC\h\os2 -r ..\..\pgptoole.rc pgptoole.res
+
+f:\wc10src\pgptools\english\dll\pgptools.dll : f:\wc10src\pgptools\english\d&
+ll\dllbasee.obj f:\wc10src\pgptools\pgptoole.def f:\wc10src\pgptools\english&
+\dll\pgptoole.res .AUTODEPEND
+ @f:
+ cd f:\wc10src\pgptools\english\dll
+ @%write pgptools.lk1 NAME pgptools
+ @%append pgptools.lk1 FIL dllbasee.obj
+ @%append pgptools.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b pgptools.imp 
+ @%append pgptools.lk1 LIBR pgptools.imp
+!endif
+ *wlink SYS os2v2 dll op m exp @..\..\pgptools.exp op maxe=25 op q op de 'PG&
+PTools for OS/2 - English ressource DLL Copyright (c) 1999-2003 by Bernd Gie&
+sen' op one @pgptools.lk1
+!ifneq BLANK "pgptoole.res"
+ rc -i $[: -i F:\WC\h -i F:\WC\h\os2 pgptoole.res pgptools.dll
+!endif
+ wlib -n -b pgptools.lib +pgptools.dll
+ copy pgptools.dll ..\RUN
+ 
+

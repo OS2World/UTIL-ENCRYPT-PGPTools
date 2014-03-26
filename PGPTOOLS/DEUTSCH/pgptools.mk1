@@ -1,0 +1,119 @@
+!define BLANK ""
+f:\wc10src\pgptools\deutsch\bubble.obj : f:\wc10src\pgptools\bubble.c .AUTOD&
+EPEND
+ @f:
+ cd f:\wc10src\pgptools\deutsch
+ *wcc386 ..\bubble.c -i=F:\WC\h;F:\WC\h\os2 -w4 -e25 -zq -otexan -5r -bt=os2&
+ -mf
+
+f:\wc10src\pgptools\deutsch\command.obj : f:\wc10src\pgptools\command.c .AUT&
+ODEPEND
+ @f:
+ cd f:\wc10src\pgptools\deutsch
+ *wcc386 ..\command.c -i=F:\WC\h;F:\WC\h\os2 -w4 -e25 -zq -otexan -5r -bt=os&
+2 -mf
+
+f:\wc10src\pgptools\deutsch\filedlg.obj : f:\wc10src\pgptools\filedlg.c .AUT&
+ODEPEND
+ @f:
+ cd f:\wc10src\pgptools\deutsch
+ *wcc386 ..\filedlg.c -i=F:\WC\h;F:\WC\h\os2 -w4 -e25 -zq -otexan -5r -bt=os&
+2 -mf
+
+f:\wc10src\pgptools\deutsch\hint.obj : f:\wc10src\pgptools\hint.c .AUTODEPEN&
+D
+ @f:
+ cd f:\wc10src\pgptools\deutsch
+ *wcc386 ..\hint.c -i=F:\WC\h;F:\WC\h\os2 -w4 -e25 -zq -otexan -5r -bt=os2 -&
+mf
+
+f:\wc10src\pgptools\deutsch\keylist.obj : f:\wc10src\pgptools\keylist.c .AUT&
+ODEPEND
+ @f:
+ cd f:\wc10src\pgptools\deutsch
+ *wcc386 ..\keylist.c -i=F:\WC\h;F:\WC\h\os2 -w4 -e25 -zq -otexan -5r -bt=os&
+2 -mf
+
+f:\wc10src\pgptools\deutsch\logwin.obj : f:\wc10src\pgptools\logwin.c .AUTOD&
+EPEND
+ @f:
+ cd f:\wc10src\pgptools\deutsch
+ *wcc386 ..\logwin.c -i=F:\WC\h;F:\WC\h\os2 -w4 -e25 -zq -otexan -5r -bt=os2&
+ -mf
+
+f:\wc10src\pgptools\deutsch\pgphelp.obj : f:\wc10src\pgptools\pgphelp.c .AUT&
+ODEPEND
+ @f:
+ cd f:\wc10src\pgptools\deutsch
+ *wcc386 ..\pgphelp.c -i=F:\WC\h;F:\WC\h\os2 -w4 -e25 -zq -otexan -5r -bt=os&
+2 -mf
+
+f:\wc10src\pgptools\deutsch\pgptools.obj : f:\wc10src\pgptools\pgptools.c .A&
+UTODEPEND
+ @f:
+ cd f:\wc10src\pgptools\deutsch
+ *wcc386 ..\pgptools.c -i=F:\WC\h;F:\WC\h\os2 -w4 -e25 -zq -otexan -5r -bt=o&
+s2 -mf
+
+f:\wc10src\pgptools\deutsch\pphrase.obj : f:\wc10src\pgptools\pphrase.c .AUT&
+ODEPEND
+ @f:
+ cd f:\wc10src\pgptools\deutsch
+ *wcc386 ..\pphrase.c -i=F:\WC\h;F:\WC\h\os2 -w4 -e25 -zq -otexan -5r -bt=os&
+2 -mf
+
+f:\wc10src\pgptools\deutsch\prefnb.obj : f:\wc10src\pgptools\prefnb.c .AUTOD&
+EPEND
+ @f:
+ cd f:\wc10src\pgptools\deutsch
+ *wcc386 ..\prefnb.c -i=F:\WC\h;F:\WC\h\os2 -w4 -e25 -zq -otexan -5r -bt=os2&
+ -mf
+
+f:\wc10src\pgptools\deutsch\profile.obj : f:\wc10src\pgptools\profile.c .AUT&
+ODEPEND
+ @f:
+ cd f:\wc10src\pgptools\deutsch
+ *wcc386 ..\profile.c -i=F:\WC\h;F:\WC\h\os2 -w4 -e25 -zq -otexan -5r -bt=os&
+2 -mf
+
+f:\wc10src\pgptools\deutsch\readme_d.obj : f:\wc10src\pgptools\readme_d.c .A&
+UTODEPEND
+ @f:
+ cd f:\wc10src\pgptools\deutsch
+ *wcc386 ..\readme_d.c -i=F:\WC\h;F:\WC\h\os2 -w4 -e25 -zq -otexan -5r -bt=o&
+s2 -mf
+
+f:\wc10src\pgptools\deutsch\pgptools.res : f:\wc10src\pgptools\pgptools.rc .&
+AUTODEPEND
+ @f:
+ cd f:\wc10src\pgptools\deutsch
+ rc -i $[: -i F:\WC\h -i F:\WC\h\os2 -r ..\pgptools.rc pgptools.res
+
+f:\wc10src\pgptools\deutsch\pgptools.exe : f:\wc10src\pgptools\deutsch\bubbl&
+e.obj f:\wc10src\pgptools\deutsch\command.obj f:\wc10src\pgptools\deutsch\fi&
+ledlg.obj f:\wc10src\pgptools\deutsch\hint.obj f:\wc10src\pgptools\deutsch\k&
+eylist.obj f:\wc10src\pgptools\deutsch\logwin.obj f:\wc10src\pgptools\deutsc&
+h\pgphelp.obj f:\wc10src\pgptools\deutsch\pgptools.obj f:\wc10src\pgptools\d&
+eutsch\pphrase.obj f:\wc10src\pgptools\deutsch\prefnb.obj f:\wc10src\pgptool&
+s\deutsch\profile.obj f:\wc10src\pgptools\deutsch\readme_d.obj f:\wc10src\pg&
+ptools\pgptools.def f:\wc10src\pgptools\deutsch\dll\pgptools.lib f:\wc10src\&
+pgptools\deutsch\pgptools.res .AUTODEPEND
+ @f:
+ cd f:\wc10src\pgptools\deutsch
+ @%write pgptools.lk1 NAME pgptools
+ @%append pgptools.lk1 FIL bubble.obj,command.obj,filedlg.obj,hint.obj,keyli&
+st.obj,logwin.obj,pgphelp.obj,pgptools.obj,pphrase.obj,prefnb.obj,profile.ob&
+j,readme_d.obj
+ @%append pgptools.lk1 LIBR dll\pgptools.lib
+!ifneq BLANK ""
+ *wlib -q -n -b pgptools.imp 
+ @%append pgptools.lk1 LIBR pgptools.imp
+!endif
+ *wlink SYS os2v2 pm op maxe=25 op q op de 'PGPTools for OS/2 Copyright (c) &
+1999-2003 by Bernd Giesen' @pgptools.lk1
+!ifneq BLANK "pgptools.res"
+ rc -i $[: -i F:\WC\h -i F:\WC\h\os2 pgptools.res pgptools.exe
+!endif
+ copy pgptools.exe RUN
+ 
+

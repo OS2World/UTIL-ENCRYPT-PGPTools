@@ -1,0 +1,29 @@
+DLGINCLUDE 5 "PPHRASEX.H"
+
+DLGTEMPLATE DID_PASSPHRASE_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "PGP Enter passphrase for selected key", DID_PASSPHRASE_DLG, 3,
+            24, 353, 109, WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        LTEXT           "Signing key:", DID_PASSPHRASE_KEY_PROMPT, 11, 92,
+                        56, 8
+        CONTROL         "", DID_PASSPHRASE_KEY_CB, 68, 64, 272, 36,
+                        WC_COMBOBOX, CBS_DROPDOWNLIST | WS_TABSTOP |
+                        WS_VISIBLE
+        AUTOCHECKBOX    "H~ide typing", DID_PASSPHRASE_HIDE, 250, 69, 90, 10,
+                        WS_GROUP
+        LTEXT           "Enter passphrase for above key:",
+                        DID_PASSPHRASE_PROMPT, 11, 69, 227, 8
+        ENTRYFIELD      "", DID_PASSPHRASE_EB, 13, 54, 32, 8, ES_MARGIN
+        DEFPUSHBUTTON   "~OK", DID_OK, 147, 12, 57, 14, WS_GROUP
+        PUSHBUTTON      "~Cancel", DID_CANCEL, 216, 12, 57, 14
+        PUSHBUTTON      "~Help", DID_PASSPHRASE_HELP, 283, 12, 57, 14,
+                        BS_HELP
+        AUTOCHECKBOX    "~Text output", DID_PASSPHRASE_TEXT, 12, 32, 78, 10,
+                        WS_GROUP
+        AUTOCHECKBOX    "~Detached signature", DID_PASSPHRASE_DETACH, 12, 22,
+                        128, 10
+        AUTOCHECKBOX    "~ASCII armor", DID_PASSPHRASE_ASCII, 12, 12, 119,
+                        10
+    END
+END

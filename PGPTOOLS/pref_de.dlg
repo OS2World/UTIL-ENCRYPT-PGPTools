@@ -1,0 +1,45 @@
+DLGINCLUDE 3 "PREF_XX.H"
+
+DLGTEMPLATE DID_PREFERENCES_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Einstellungen", DID_PREFERENCES_DLG, 115, 16, 317, 252,
+            WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        GROUPBOX        "Datei mit dem îffentlichen SchlÅsselring",
+                        DID_PUBLIC_GROUP, 17, 202, 283, 45
+        ENTRYFIELD      "", DID_PUBLIC_FILE_STRN, 29, 227, 260, 8, ES_MARGIN
+        PUSHBUTTON      "S~uchen", DID_PUBLIC_BR_BUTTON, 230, 207, 60, 14
+        GROUPBOX        "Datei mit dem privaten SchlÅsselring",
+                        DID_PRIVATE_GROUP, 17, 147, 283, 45
+        ENTRYFIELD      "", DID_PRIVATE_FILE_STRN, 29, 171, 260, 8,
+                        ES_MARGIN
+        PUSHBUTTON      "Su~chen", DID_PRIVATE_BR_BUTTON, 230, 152, 60, 14
+        GROUPBOX        "Zufallszahlendatei", DID_RANDOM_GROUP, 17, 92, 283,
+                        45
+        ENTRYFIELD      "", DID_RANDOM_FILE_STRN, 29, 117, 260, 8, ES_MARGIN
+        PUSHBUTTON      "Such~en", DID_RANDOM_BR_BUTTON, 230, 97, 60, 14
+        GROUPBOX        "Kommentar (optional)", DID_COMMENT_GROUP, 17, 53,
+                        283, 28
+        ENTRYFIELD      "", DID_COMMENT_STRN, 29, 61, 260, 8, ES_MARGIN
+        LTEXT           "Passphrase im Cache behalten fÅr:",
+                        DID_CACHE_SPIN_PROMPT, 17, 36, 149, 8
+        CONTROL         "", DID_CACHE_SPIN_HOUR, 180, 36, 28, 12,
+                        WC_SPINBUTTON, SPBS_ALLCHARACTERS | SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_SERVANT | SPBS_JUSTDEFAULT |
+                        SPBS_JUSTRIGHT | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "h", -1, 210, 36, 10, 8, NOT WS_GROUP
+        CONTROL         "", DID_CACHE_SPIN_MIN, 222, 36, 28, 12,
+                        WC_SPINBUTTON, SPBS_ALLCHARACTERS | SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_SERVANT | SPBS_JUSTDEFAULT |
+                        SPBS_JUSTRIGHT | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "m", -1, 252, 36, 9, 8, NOT WS_GROUP
+        CONTROL         "", DID_CACHE_SPIN_SEC, 263, 36, 28, 12,
+                        WC_SPINBUTTON, SPBS_ALLCHARACTERS | SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_SERVANT | SPBS_JUSTDEFAULT |
+                        SPBS_JUSTRIGHT | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "s", -1, 293, 36, 9, 8, NOT WS_GROUP
+        DEFPUSHBUTTON   "~Sichern", DID_OK, 6, 4, 60, 14, WS_GROUP
+        PUSHBUTTON      "A~bbruch", DID_CANCEL, 86, 4, 60, 14
+        PUSHBUTTON      "~Hilfe", DID_PREF_HELP, 166, 4, 60, 14, BS_HELP
+    END
+END

@@ -1,0 +1,9 @@
+!define BLANK ""
+f:\wc10src\pgptools\english\doc\pgptoole.inf : f:\wc10src\pgptools\english\d&
+oc\pgptoole.ipf
+ @f:
+ cd f:\wc10src\pgptools\english\doc
+ ipfc  /inf /COUNTRY=1 /CODEPAGE=850 /W3 pgptoole.ipf
+ copy pgptoole.inf ..\RUN\pgptools.inf
+ 
+

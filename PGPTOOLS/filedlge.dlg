@@ -1,0 +1,26 @@
+DLGINCLUDE 4 "FILEDLGX.H"
+
+DLGTEMPLATE DID_FILE_DIALOG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Dialog Title", DID_FILE_DIALOG, 107, 53, 315, 175, WS_VISIBLE,
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        LTEXT           "Filename:", DID_FILENAME_TXT, 9, 158, 80, 8
+        ENTRYFIELD      "", DID_FILENAME_ED, 10, 147, 298, 8, ES_MARGIN
+        LTEXT           "File type:", DID_FILTER_TXT, 9, 132, 83, 8
+        CONTROL         "", DID_FILTER_CB, 8, 94, 299, 37, WC_COMBOBOX,
+                        CBS_DROPDOWN | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Drive:", DID_DRIVE_TXT, 9, 108, 143, 8
+        CONTROL         "", DID_DRIVE_CB, 8, 26, 150, 83, WC_COMBOBOX,
+                        CBS_DROPDOWNLIST | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Directory:", DID_DIRECTORY_TXT, 9, 85, 115, 8
+        LISTBOX         DID_DIRECTORY_LB, 8, 37, 148, 49, LS_OWNERDRAW |
+                        LS_HORZSCROLL
+        LTEXT           "Files:", DID_FILES_TXT, 166, 110, 78, 8
+        LISTBOX         DID_FILES_LB, 167, 37, 139, 73, LS_HORZSCROLL
+        PUSHBUTTON      "~OK", DID_OK, 6, 4, 58, 14, WS_GROUP
+        PUSHBUTTON      "~Cancel", DID_CANCEL, 84, 4, 58, 14
+        PUSHBUTTON      "Cl~ipboard", DID_APPLY_PB, 162, 4, 79, 14
+        PUSHBUTTON      "~Help", DID_HELP_PB, 261, 4, 40, 14, BS_HELP
+    END
+END

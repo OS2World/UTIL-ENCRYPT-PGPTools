@@ -1,0 +1,17 @@
+DLGINCLUDE 7 "LOGWINXX.H"
+
+DLGTEMPLATE DID_LOGWIN_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "PGPTools - Ergebnis der EntschlÅsselung/PrÅfung",
+            DID_LOGWIN_DLG, 52, -28, 305, 161, WS_VISIBLE, FCF_SYSMENU |
+            FCF_TITLEBAR
+    BEGIN
+        MLE             "", DID_MLE_TEXT, 11, 32, 282, 124, MLS_READONLY |
+                        MLS_WORDWRAP | MLS_HSCROLL | MLS_VSCROLL | NOT
+                        WS_TABSTOP
+        DEFPUSHBUTTON   "S~chlie·en", DID_OK, 11, 10, 46, 14
+        PUSHBUTTON      "EntschlÅsselte/geprÅfte Daten ~editieren",
+                        DID_LOGWIN_RUN_EDITOR, 69, 10, 175, 14
+        PUSHBUTTON      "~Hilfe", DID_LOGWIN_HELP, 254, 10, 40, 14, BS_HELP
+    END
+END

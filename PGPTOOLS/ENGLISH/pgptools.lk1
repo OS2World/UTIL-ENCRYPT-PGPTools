@@ -1,0 +1,3 @@
+NAME pgptools
+FIL bubble.obj,command.obj,filedlg.obj,hint.obj,keylist.obj,logwin.obj,pgphelp.obj,pgptools.obj,pphrase.obj,prefnb.obj,profile.obj,readme_e.obj
+LIBR dll\pgptools.lib

@@ -1,0 +1,6 @@
+// 1238
+#ifndef AUTOBUILDCOUNT_H
+#define AUTOBUILDCOUNT_H
+#define BUILDCOUNT_NUM 1238
+#define BUILDCOUNT_STR "1238"
+#endif

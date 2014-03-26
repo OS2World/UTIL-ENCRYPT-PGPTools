@@ -1,0 +1,6 @@
+; DLL with German ressources
+
+LIBRARY PGPTOOLS
+
+DESCRIPTION 'PGPTOOLS for OS/2 - German ressource DLL'
+

@@ -1,0 +1,16 @@
+DLGINCLUDE 7 "LOGWINXX.H"
+
+DLGTEMPLATE DID_LOGWIN_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "PGPTools - Decrypt/Verify result", DID_LOGWIN_DLG, 52, -31, 305,
+            161, WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        MLE             "", DID_MLE_TEXT, 11, 32, 282, 124, MLS_READONLY |
+                        MLS_WORDWRAP | MLS_HSCROLL | MLS_VSCROLL | NOT
+                        WS_TABSTOP
+        DEFPUSHBUTTON   "~Close", DID_OK, 23, 9, 50, 14
+        PUSHBUTTON      "~Edit decrypted/verified data",
+                        DID_LOGWIN_RUN_EDITOR, 88, 9, 128, 14
+        PUSHBUTTON      "~Help", DID_LOGWIN_HELP, 231, 9, 50, 14, BS_HELP
+    END
+END

@@ -1,0 +1,30 @@
+DLGINCLUDE 5 "PPHRASEX.H"
+
+DLGTEMPLATE DID_PASSPHRASE_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "PGP Passphrase fÅr den gewÑhlten SchlÅssel eingeben",
+            DID_PASSPHRASE_DLG, 3, 24, 353, 109, WS_VISIBLE, FCF_SYSMENU |
+            FCF_TITLEBAR
+    BEGIN
+        LTEXT           "SchlÅssel:", DID_PASSPHRASE_KEY_PROMPT, 11, 94, 56,
+                        8
+        CONTROL         "", DID_PASSPHRASE_KEY_CB, 68, 66, 272, 36,
+                        WC_COMBOBOX, CBS_DROPDOWNLIST | WS_TABSTOP |
+                        WS_VISIBLE
+        AUTOCHECKBOX    "Eingabe ~unsichtbar", DID_PASSPHRASE_HIDE, 250, 69,
+                        90, 10, WS_GROUP
+        LTEXT           "Passphrase fÅr den angegebenen SchlÅssel eingeben:",
+                        DID_PASSPHRASE_PROMPT, 11, 69, 227, 8
+        ENTRYFIELD      "", DID_PASSPHRASE_EB, 13, 54, 32, 8, ES_MARGIN
+        DEFPUSHBUTTON   "~OK", DID_OK, 148, 12, 57, 14, WS_GROUP
+        PUSHBUTTON      "A~bbruch", DID_CANCEL, 215, 12, 57, 14
+        PUSHBUTTON      "~Hilfe", DID_PASSPHRASE_HELP, 282, 12, 58, 14,
+                        BS_HELP
+        AUTOCHECKBOX    "~Textausgabe", DID_PASSPHRASE_TEXT, 12, 32, 78, 10,
+                        WS_GROUP
+        AUTOCHECKBOX    "~Signatur in separate Datei", DID_PASSPHRASE_DETACH,
+                        12, 22, 128, 10
+        AUTOCHECKBOX    "~ASCII-SchutzhÅlle", DID_PASSPHRASE_ASCII, 12, 12,
+                        119, 10
+    END
+END

@@ -1,0 +1,18 @@
+DLGINCLUDE 6 "KEYLSTXX.H"
+
+DLGTEMPLATE DID_ENCRYPT_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "SchlÅssel zum VerschlÅsseln auswÑhlen", DID_ENCRYPT_DLG, 62,
+            -48, 327, 181, WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        LTEXT           "SchlÅssel-ID  Algorithmus Benutzer-ID",
+                        DID_ENCRYPT_CAPTION, 20, 163, 295, 8
+        LISTBOX         DID_ENCRYPT_LISTBOX, 18, 43, 293, 120,
+                        LS_MULTIPLESEL | LS_HORZSCROLL | LS_EXTENDEDSEL
+        AUTOCHECKBOX    "~ASCII-SchutzhÅlle", DID_ENCRYPT_ASCII, 18, 25, 89,
+                        10
+        DEFPUSHBUTTON   "~OK", DID_OK, 6, 4, 62, 14, WS_GROUP
+        PUSHBUTTON      "A~bbruch", DID_CANCEL, 84, 4, 62, 14
+        PUSHBUTTON      "~Hilfe", DID_ENCRYPT_HELP, 162, 4, 62, 14, BS_HELP
+    END
+END

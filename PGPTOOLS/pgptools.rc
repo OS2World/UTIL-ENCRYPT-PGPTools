@@ -1,0 +1,52 @@
+/**********************************************************************
+ *
+ *  PGPTools - PM shell for PGP v5.0 for OS/2
+ *
+ *  Module   : PGPTOOLE.RC
+ *  Info     : Language independent resource file
+ *  Author   : Bernd Giesen
+ *  Compiler : Watcom C/C++ v10.6
+ *
+ *  Copyright (c) 1999-2003 Bernd Giesen. All rights reserved.
+ *
+ *  This program is free software; you can redistribute it and/or
+ *  modify it under the terms of the GNU General Public License as
+ *  published by the Free Software Foundation; either
+ *  version 2 of the License, or (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ *  General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+ *  MA 02111-1307, USA.
+ *
+ **********************************************************************/
+
+#include "pgptools.h"
+#include "hint_xx.h"
+
+/*
+ * Pointers and icons have to be included directly into the
+ * executable file :-(
+ */
+
+ICON ID_DIALOG_ICON             "..\\PGPTOOLS.ICO"
+ICON IDD_PGPKEYS_HINT_ICO       "..\\WARNING.ICO"
+
+POINTER ID_PGPKEYS_ICON         "..\\PGPKEYS.ICO"
+POINTER ID_SIGN_ICON            "..\\SIGN.ICO"
+POINTER ID_ENCRYPT_ICON         "..\\ENCRYPT.ICO"
+POINTER ID_ENCRYPT_SIGN_ICON    "..\\ENCRSIGN.ICO"
+POINTER ID_DECRYPT_VERIFY_ICON  "..\\DECVERFY.ICO"
+
+BITMAP ID_PGPKEYS_SMALL_BMP         "..\\PGPKEYS2.BMP"
+BITMAP ID_SIGN_SMALL_BMP            "..\\SIGN2.BMP"
+BITMAP ID_ENCRYPT_SMALL_BMP         "..\\ENCRYPT2.BMP"
+BITMAP ID_ENCRYPT_SIGN_SMALL_BMP    "..\\ENCRSIG2.BMP"
+BITMAP ID_DECRYPT_VERIFY_SMALL_BMP  "..\\DECVERF2.BMP"
+
+

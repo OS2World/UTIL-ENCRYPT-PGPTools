@@ -1,0 +1,76 @@
+DLGINCLUDE 3 "PREFNBXX.H"
+
+DLGTEMPLATE DID_FILES_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Files", DID_FILES_DLG, 103, 26, 317, 184, NOT FS_DLGBORDER |
+            WS_VISIBLE
+    BEGIN
+        GROUPBOX        "Public keyring file", DID_PUBLIC_GROUP, 17, 128,
+                        283, 45
+        ENTRYFIELD      "", DID_PUBLIC_FILE_STRN, 29, 153, 260, 8, ES_MARGIN
+        PUSHBUTTON      "~Browse", DID_PUBLIC_BR_BUTTON, 230, 133, 60, 14
+        GROUPBOX        "Private keyring file", DID_PRIVATE_GROUP, 17, 73,
+                        283, 45
+        ENTRYFIELD      "", DID_PRIVATE_FILE_STRN, 29, 97, 260, 8, ES_MARGIN
+        PUSHBUTTON      "Bro~wse", DID_PRIVATE_BR_BUTTON, 230, 78, 60, 14
+        GROUPBOX        "Random seed file", DID_RANDOM_GROUP, 17, 18, 283,
+                        45
+        ENTRYFIELD      "", DID_RANDOM_FILE_STRN, 29, 43, 260, 8, ES_MARGIN
+        PUSHBUTTON      "Brows~e", DID_RANDOM_BR_BUTTON, 230, 23, 60, 14
+    END
+END
+
+DLGTEMPLATE DID_PREF_NB_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Preferences", DID_PREF_NB_DLG, 118, 8, 371, 256, WS_VISIBLE,
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        CONTROL         "", DID_PREF_NOTEBOOK, 15, 30, 329, 220, WC_NOTEBOOK,
+                        BKS_BACKPAGESBR | BKS_MAJORTABRIGHT | BKS_SQUARETABS |
+                        BKS_ROUNDEDTABS | BKS_STATUSTEXTLEFT | 0x0800 |
+                        BKS_TABTEXTLEFT | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        DEFPUSHBUTTON   "~Save", DID_OK, 6, 4, 51, 14
+        PUSHBUTTON      "~Cancel", DID_CANCEL, 77, 4, 51, 14
+        PUSHBUTTON      "~Help", DID_PREF_HELP, 148, 4, 40, 14, BS_HELP
+    END
+END
+
+DLGTEMPLATE DID_GENERAL_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "General", DID_GENERAL_DLG, 112, 59, 317, 186, NOT FS_DLGBORDER |
+            WS_VISIBLE
+    BEGIN
+        GROUPBOX        "Comment (optional)", DID_COMMENT_GROUP, 15, 153,
+                        283, 28
+        ENTRYFIELD      "", DID_COMMENT_STRN, 24, 160, 260, 8, ES_MARGIN
+        GROUPBOX        "Send key server", DID_SEND_KEYSRV_GRP, 15, 118, 283,
+                        28
+        ENTRYFIELD      "", DID_SEND_KEYSRV_STRN, 24, 125, 260, 8, ES_MARGIN
+        GROUPBOX        "Editor", DID_EDITOR_GROUP, 15, 86, 283, 25
+        ENTRYFIELD      "", DID_EDITOR_STRN, 24, 92, 260, 8, ES_MARGIN
+        LTEXT           "Keep passphrase in cache for:",
+                        DID_CACHE_SPIN_PROMPT, 14, 67, 149, 8
+        CONTROL         "", DID_CACHE_SPIN_HOUR, 177, 66, 28, 25,
+                        WC_SPINBUTTON, SPBS_ALLCHARACTERS | SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_SERVANT | SPBS_JUSTDEFAULT |
+                        SPBS_JUSTRIGHT | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "h", -1, 207, 67, 10, 8, NOT WS_GROUP
+        CONTROL         "", DID_CACHE_SPIN_MIN, 219, 66, 28, 25,
+                        WC_SPINBUTTON, SPBS_ALLCHARACTERS | SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_SERVANT | SPBS_JUSTDEFAULT |
+                        SPBS_JUSTRIGHT | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "m", -1, 249, 67, 9, 8, NOT WS_GROUP
+        CONTROL         "", DID_CACHE_SPIN_SEC, 260, 66, 28, 25,
+                        WC_SPINBUTTON, SPBS_ALLCHARACTERS | SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_SERVANT | SPBS_JUSTDEFAULT |
+                        SPBS_JUSTRIGHT | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "s", -1, 290, 67, 9, 8, NOT WS_GROUP
+        AUTOCHECKBOX    "~Always encrypt to self", DID_ENCRYPT_TO_SELF, 14,
+                        46, 225, 10
+        AUTOCHECKBOX    "~Window always on top", DID_ALWAYS_ON_TOP, 14, 36,
+                        194, 10
+        AUTOCHECKBOX    "Always ~display hint window", DID_SHOW_HINT_WINDOW,
+                        14, 26, 194, 10
+        AUTOCHECKBOX    "Small ~icons", DID_SMALL_ICONS, 14, 16, 194, 10
+    END
+END

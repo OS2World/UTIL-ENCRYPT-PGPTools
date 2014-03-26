@@ -1,0 +1,11 @@
+PGPTools for OS/2 v1.50 - Source code -
+==========================================
+This is a 32-bit OS/2 PM user interface
+for the Pretty Good Privacy (PGP) v5.0
+for OS/2 encryption software. Easy to use,
+clipboard support etc. Distributed under
+the terms of the GNU General Public
+License. See COPYING for details.
+Compiler: Watcom C/C++ v10.6
+Copyright (c) 1999-2003 Bernd Giesen
+

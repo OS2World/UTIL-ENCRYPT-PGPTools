@@ -1,0 +1,16 @@
+DLGINCLUDE 2 "ABOUT_XX.H"
+
+DLGTEMPLATE DID_ABOUT_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "šber", DID_ABOUT_DLG, 64, 2, 274, 122, WS_VISIBLE, FCF_SYSMENU |
+            FCF_TITLEBAR
+    BEGIN
+        DEFPUSHBUTTON   "~OK", DID_OK, 114, 5, 54, 14
+        CTEXT           "Text1", DID_ABOUT_TEXT1, 57, 103, 207, 8
+        ICON            DID_OK, -1, 16, 85, 20, 16, WS_GROUP
+        CTEXT           "Text2", DID_ABOUT_TEXT2, 57, 88, 207, 8
+        CTEXT           "Text3", DID_ABOUT_TEXT3, 57, 73, 207, 8
+        MLE             "", DID_ABOUT_TEXT4, 16, 24, 248, 40, MLS_READONLY |
+                        MLS_WORDWRAP | MLS_VSCROLL | WS_GROUP
+    END
+END

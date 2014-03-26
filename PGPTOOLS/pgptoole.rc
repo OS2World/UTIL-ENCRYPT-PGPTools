@@ -1,0 +1,171 @@
+/**********************************************************************
+ *
+ *  PGPTools - PM shell for PGP v5.0 for OS/2
+ *
+ *  Module   : PGPTOOLE.RC
+ *  Info     : English resource file
+ *  Author   : Bernd Giesen
+ *  Compiler : Watcom C/C++ v10.6
+ *
+ *  Copyright (c) 1999-2003 Bernd Giesen. All rights reserved.
+ *
+ *  This program is free software; you can redistribute it and/or
+ *  modify it under the terms of the GNU General Public License as
+ *  published by the Free Software Foundation; either
+ *  version 2 of the License, or (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ *  General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+ *  MA 02111-1307, USA.
+ *
+ **********************************************************************
+ *
+ *  History:
+ *
+ *  290399 - Created
+ *  040499 - Strings added
+ *  110499 - PPHRASEE.DLG added
+ *  230499 - Popup menuitems added
+ *  280499 - KEYLSTEN.DLG added
+ *  120599 - LOGWINEN.DLG added
+ *  160599 - Popup menuitem added
+ *  170699 - Strings added
+ *  260699 - Strings added
+ *         - notebook ressource and header file included
+ *  130799 - IDS_ONTOP_MENU added
+ *  231199 - IDS_LAUNCH_PGPKEYS_FAILED and ID_POPUP_EXT added
+ *  051299 - IDS_PGPKEYS_EXE added
+ *  281299 - hint_en dialog included
+ *  150300 - IDM_TOGGLE_TITLEBAR added
+ *  030400 - Fix: IDM_TOGGLE_TITLEBAR was missing in ID_POPUP_EXT
+ *  290900 - main_en.dlg replaced by main_xx.dlg
+ *           IDS_PLEASE_RESTART, IDS_PLEASE_NOTE and
+ *           IDS_SHORT_MAIN_TITLE added
+ *  300900 - IDS_RUN_EDITOR_FAILED added
+ *  031000 - IDS_INIFILE_UPDATE_REQUIRED added
+ *  250101 - Copyright string updated
+ *  140602 - Copyright string updated
+ *
+ **********************************************************************/
+
+#include "pgptools.h"
+#include "main_xx.h"
+#include "about_xx.h"
+#include "prefnbxx.h"
+#include "filedlgx.h"
+#include "pphrasex.h"
+#include "keylstxx.h"
+#include "logwinxx.h"
+#include "hint_xx.h"
+
+STRINGTABLE
+BEGIN
+        IDS_MAIN_TITLE                  "PGPTools for OS/2"
+        IDS_PREFERENCES_MENU            "~Preferences"
+        IDS_ABOUT_MENU                  "~About"
+        IDS_ABOUT_TITLE                 "About PGPTools"
+        IDS_ABOUT_TEXT2                 "Copyright (c) 1999-2003 by Bernd Giesen"
+        IDS_ABOUT_TEXT3                 "All rights reserved."
+        IDS_PREF_TITLE                  "PGPTools Preferences"
+        IDS_PGPPATH_MISSING             "Environment variable 'PGPPATH' is not set. It must point to the current PGP directory. Program aborted!"
+        IDS_PUB_KEYFILE_NOT_EXIST       "The public keyring file '%s' does not exist or is invalid!"
+        IDS_PRIV_KEYFILE_NOT_EXIST      "The private keyring file '%s' does not exist or is invalid!"
+        IDS_WARNING                     "Warning"
+        IDS_CMDLINE_ERROR               "Invalid commandline option!"
+        IDS_SELECT_PUBKEY_TITLE         "Select public keyring file"
+        IDS_SELECT_PRIVKEY_TITLE        "Select private keyring file"
+        IDS_SELECT_RANDSEED_TITLE       "Select random seed file"
+        IDS_SELECT_SIGNDATA_TITLE       "Select file to sign"
+        IDS_SELECT_ENCRYPTDATA_TITLE    "Select file to encrypt"
+        IDS_SELECT_ENC_SIGNDATA_TITLE   "Select file to sign & encrypt"
+        IDS_SELECT_DECVERIFYDATA_TITLE  "Select file to decrypt/verify"
+        IDS_INVALID_CLIPBOARD_DATA      "Invalid or no data in clipboard!"
+        IDS_NO_CLIPBOARD_ACCESS         "Clipboard access failed!"
+        IDS_GENERAL_PROCESS_FAILURE     "General process failure!"
+        IDS_ENTER_PASSPHRASE_WARNING    "You must enter a valid passphrase!"
+        IDS_PGP_START_FAILED            "PGP execution failed for some reason!"
+        IDS_PGP_EXECUTION_FAILED        "PGP execution failed (did you enter the correct passphrase?)"
+        IDS_SHOW_CLIPBRD_FAILED         "Error loading clipboard!"
+        IDS_BUBBLE_SIGNDATA_HELP        "Sign"
+        IDS_BUBBLE_ENCRYPTDATA_HELP     "Encrypt"
+        IDS_BUBBLE_ENC_SIGNDATA_HELP    "Encrypt & Sign"
+        IDS_BUBBLE_DECVERIFYDATA_HELP   "Decrypt/Verify"
+        IDS_BUBBLE_PGPKEYS_HELP         "Launch PGPKeys"
+        IDS_QUERY_TARGET_OVERWRITE      "Target file '%s' already exists. Overwrite?"
+        IDS_SELECT_TARGETFILE_TITLE     "Select destination file to decrypt to"
+        IDS_SELECT_FILE2CHECK_TITLE     "Select file to verify against signature"
+        IDS_PGP_EXECUTION_SUCCEEDED     "PGP operation successfully finished."
+        IDS_HELP_TITLE                  "PGPTools for OS/2 %s Help"
+        IDS_NO_HELP_FOUND               "Helpfile not found, no online help available!"
+        IDS_ERROR_LOADING_HELP          "Error loading helpfile!"
+        IDS_NO_HELP_AVAIL               "No help available for related topic!"
+        IDS_HELP_MENU                   "~Help"
+        IDS_PGP_USER_ABORT              "PGP action was cancelled by user!"
+        IDS_LAUNCH_PGPKEYS_FAILED       "Launching PGPKeys failed!"
+        IDS_GENERAL_TAB                 "~General"
+        IDS_FILES_TAB                   "~Files"
+        IDS_ONTOP_MENU                  "Always on ~top"
+        IDS_PGPKEYS_EXE                 "PGPKeys.exe us"
+        IDS_PLEASE_RESTART              "You must restart PGPTools for OS/2 to make the changes take effect!"
+        IDS_PLEASE_NOTE                 "Please note"
+        IDS_SHORT_MAIN_TITLE            "PGPTools"
+        IDS_RUN_EDITOR_FAILED           "Launching the editor failed"
+        IDS_INIFILE_UPDATE_REQUIRED     "The initialization file must be updated. Please check your settings and save them again!"
+END
+
+MENU    ID_POPUP
+{
+        MENUITEM "~Sign clipboard", IDM_SIGN, MIS_TEXT
+        MENUITEM "~Encrypt clipboard", IDM_ENCRYPT, MIS_TEXT
+        MENUITEM "E~ncrypt and sign clipboard", IDM_ENCRYPT_AND_SIGN, MIS_TEXT
+        MENUITEM "~Decrypt or verify clipboard", IDM_DECRYPT_OR_VERIFY, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Empty clip~board", IDM_EMPTY_CLIPBRD, MIS_TEXT
+        MENUITEM "Sh~ow clipboard", IDM_SHOW_CLIPBRD, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "~Text output", IDM_TEXTOUTPUT, MIS_TEXT
+        MENUITEM "Detached s~ignature", IDM_DETACHED, MIS_TEXT
+        MENUITEM "~ASCII armor", IDM_ASCII_ARMOR, MIS_TEXT
+        MENUITEM "Al~ways encrypt to self", IDM_ENCRYPT_TO_SELF, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "To~ggle title bar", IDM_TOGGLE_TITLEBAR, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit PGPTools\tAlt+F4", IDM_EXIT, MIS_TEXT
+}
+
+MENU    ID_POPUP_EXT
+{
+        MENUITEM "~Sign clipboard", IDM_SIGN, MIS_TEXT
+        MENUITEM "~Encrypt clipboard", IDM_ENCRYPT, MIS_TEXT
+        MENUITEM "E~ncrypt and sign clipboard", IDM_ENCRYPT_AND_SIGN, MIS_TEXT
+        MENUITEM "~Decrypt or verify clipboard", IDM_DECRYPT_OR_VERIFY, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Empty clip~board", IDM_EMPTY_CLIPBRD, MIS_TEXT
+        MENUITEM "Sh~ow clipboard", IDM_SHOW_CLIPBRD, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "~Text output", IDM_TEXTOUTPUT, MIS_TEXT
+        MENUITEM "Detached s~ignature", IDM_DETACHED, MIS_TEXT
+        MENUITEM "~ASCII armor", IDM_ASCII_ARMOR, MIS_TEXT
+        MENUITEM "Al~ways encrypt to self", IDM_ENCRYPT_TO_SELF, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "To~ggle title bar", IDM_TOGGLE_TITLEBAR, MIS_TEXT
+        MENUITEM "~Launch PGPKeys", IDM_LAUNCH_PGPKEYS, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit PGPTools\tAlt+F4", IDM_EXIT, MIS_TEXT
+}
+
+RCINCLUDE "..\..\main_xx.dlg"
+RCINCLUDE "..\..\about_en.dlg"
+RCINCLUDE "..\..\prefnben.dlg"
+RCINCLUDE "..\..\filedlge.dlg"
+RCINCLUDE "..\..\pphrasee.dlg"
+RCINCLUDE "..\..\keylsten.dlg"
+RCINCLUDE "..\..\logwinen.dlg"
+RCINCLUDE "..\..\hint_en.dlg"
+

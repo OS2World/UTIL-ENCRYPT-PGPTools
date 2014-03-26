@@ -1,0 +1,15 @@
+#include <os2.h>
+#include <ABOUT_XX.H>
+
+DLGTEMPLATE DID_ABOUT_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "šber", DID_ABOUT_DLG, 64, 52, 222, 72, WS_VISIBLE,
+            FCF_TITLEBAR | FCF_SYSMENU
+    BEGIN
+        DEFPUSHBUTTON   "~OK", DID_OK, 85, 8, 54, 14
+        CTEXT           "Text1", DID_ABOUT_TEXT1, 54, 53, 160, 8
+        ICON            DID_OK, -1, 16, 35, 20, 16, WS_GROUP
+        CTEXT           "Text2", DID_ABOUT_TEXT2, 54, 42, 155, 8
+        CTEXT           "Text3", DID_ABOUT_TEXT3, 54, 31, 155, 8
+    END
+END

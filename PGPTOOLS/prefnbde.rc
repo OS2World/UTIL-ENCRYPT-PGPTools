@@ -1,0 +1,77 @@
+#include <os2.h>
+#include "prefnbxx.h"
+
+DLGTEMPLATE DID_FILES_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Dateien", DID_FILES_DLG, 103, 26, 317, 184, NOT FS_DLGBORDER |
+            WS_VISIBLE
+    BEGIN
+        GROUPBOX        "Datei mit dem îffentlichen SchlÅsselring",
+                        DID_PUBLIC_GROUP, 17, 128, 283, 45
+        ENTRYFIELD      "", DID_PUBLIC_FILE_STRN, 29, 153, 260, 8, ES_MARGIN
+        PUSHBUTTON      "S~uchen", DID_PUBLIC_BR_BUTTON, 230, 133, 60, 14
+        GROUPBOX        "Datei mit dem privaten SchlÅsselring",
+                        DID_PRIVATE_GROUP, 17, 73, 283, 45
+        ENTRYFIELD      "", DID_PRIVATE_FILE_STRN, 29, 97, 260, 8, ES_MARGIN
+        PUSHBUTTON      "Su~chen", DID_PRIVATE_BR_BUTTON, 230, 78, 60, 14
+        GROUPBOX        "Zufallszahlendatei", DID_RANDOM_GROUP, 17, 18, 283,
+                        45
+        ENTRYFIELD      "", DID_RANDOM_FILE_STRN, 29, 43, 260, 8, ES_MARGIN
+        PUSHBUTTON      "Such~en", DID_RANDOM_BR_BUTTON, 230, 23, 60, 14
+    END
+END
+
+DLGTEMPLATE DID_PREF_NB_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Einstellungen", DID_PREF_NB_DLG, 118, 8, 371, 256, WS_VISIBLE,
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        CONTROL         "", DID_PREF_NOTEBOOK, 15, 30, 329, 220, WC_NOTEBOOK,
+                        BKS_BACKPAGESBR | BKS_MAJORTABRIGHT | BKS_SQUARETABS |
+                        BKS_ROUNDEDTABS | BKS_STATUSTEXTLEFT | 0x0800 |
+                        BKS_TABTEXTLEFT | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        DEFPUSHBUTTON   "~Sichern", DID_OK, 6, 4, 51, 14
+        PUSHBUTTON      "A~bbruch", DID_CANCEL, 77, 4, 51, 14
+        PUSHBUTTON      "~Hilfe", DID_PREF_HELP, 148, 4, 40, 14, BS_HELP
+    END
+END
+
+DLGTEMPLATE DID_GENERAL_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Allgemein", DID_GENERAL_DLG, 112, 59, 317, 186, NOT
+            FS_DLGBORDER | FS_BORDER | WS_VISIBLE
+    BEGIN
+        GROUPBOX        "Kommentar (optional)", DID_COMMENT_GROUP, 15, 153,
+                        283, 28
+        ENTRYFIELD      "", DID_COMMENT_STRN, 24, 160, 260, 8, ES_MARGIN
+        GROUPBOX        "Sende-Keyserver", DID_SEND_KEYSRV_GRP, 15, 118, 283,
+                        28
+        ENTRYFIELD      "", DID_SEND_KEYSRV_STRN, 24, 125, 260, 8, ES_MARGIN
+        GROUPBOX        "Editor", DID_EDITOR_GROUP, 15, 86, 283, 25
+        ENTRYFIELD      "", DID_EDITOR_STRN, 24, 92, 260, 8, ES_MARGIN
+        LTEXT           "Passphrase im Cache behalten fÅr:",
+                        DID_CACHE_SPIN_PROMPT, 14, 67, 149, 8
+        CONTROL         "", DID_CACHE_SPIN_HOUR, 177, 66, 28, 25,
+                        WC_SPINBUTTON, SPBS_ALLCHARACTERS | SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_SERVANT | SPBS_JUSTDEFAULT |
+                        SPBS_JUSTRIGHT | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "h", -1, 207, 67, 10, 8, NOT WS_GROUP
+        CONTROL         "", DID_CACHE_SPIN_MIN, 219, 66, 28, 25,
+                        WC_SPINBUTTON, SPBS_ALLCHARACTERS | SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_SERVANT | SPBS_JUSTDEFAULT |
+                        SPBS_JUSTRIGHT | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "m", -1, 249, 67, 9, 8, NOT WS_GROUP
+        CONTROL         "", DID_CACHE_SPIN_SEC, 260, 66, 28, 25,
+                        WC_SPINBUTTON, SPBS_ALLCHARACTERS | SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_SERVANT | SPBS_JUSTDEFAULT |
+                        SPBS_JUSTRIGHT | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "s", -1, 290, 67, 9, 8, NOT WS_GROUP
+        AUTOCHECKBOX    "~Immer mit eigenem SchlÅssel verschlÅsseln",
+                        DID_ENCRYPT_TO_SELF, 14, 46, 225, 10
+        AUTOCHECKBOX    "~Fenster immer im Vordergrund", DID_ALWAYS_ON_TOP,
+                        14, 36, 194, 10
+        AUTOCHECKBOX    "~Hinweisfenster immer anzeigen",
+                        DID_SHOW_HINT_WINDOW, 14, 26, 194, 10
+        AUTOCHECKBOX    "Kle~ine Symbole", DID_SMALL_ICONS, 14, 16, 194, 10
+    END
+END

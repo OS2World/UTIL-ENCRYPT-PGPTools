@@ -1,0 +1,15 @@
+DLGINCLUDE 8 "HINT_XX.H"
+
+DLGTEMPLATE IDD_PGPKEYS_HINT_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Information", IDD_PGPKEYS_HINT_DLG, 14, 48, 252, 60, WS_VISIBLE
+    BEGIN
+        ICON            IDD_PGPKEYS_HINT_ICO, IDD_PGPKEYS_HINT_ICO, 6, 27,
+                        20, 16, WS_GROUP
+        LTEXT           "PGPKeys utility or parts of it not available!",
+                        IDD_PGPKEYS_HINT_TXT, 55, 39, 186, 8, NOT WS_GROUP
+        DEFPUSHBUTTON   "OK", DID_OK, 6, 4, 70, 14, WS_GROUP
+        AUTOCHECKBOX    "Don't show this message again",
+                        IDD_PGPKEYS_HINT_ENABLE, 55, 23, 162, 10
+    END
+END

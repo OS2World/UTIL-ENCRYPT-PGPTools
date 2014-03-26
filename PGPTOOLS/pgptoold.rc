@@ -1,0 +1,173 @@
+/**********************************************************************
+ *
+ *  PGPTools - PM shell for PGP v5.0 for OS/2
+ *
+ *  Module   : PGPTOOLD.RC
+ *  Info     : German resource file
+ *  Author   : Bernd Giesen
+ *  Compiler : Watcom C/C++ v10.6
+ *
+ *  Copyright (c) 1999-2003 Bernd Giesen. All rights reserved.
+ *
+ *  This program is free software; you can redistribute it and/or
+ *  modify it under the terms of the GNU General Public License as
+ *  published by the Free Software Foundation; either
+ *  version 2 of the License, or (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ *  General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+ *  MA 02111-1307, USA.
+ *
+ **********************************************************************
+ *
+ *  History:
+ *
+ *  290399 - Created
+ *  030499 - Strings added
+ *  160499 - PPHRASED.DLG added
+ *  220499 - Popup menuitems added
+ *  280499 - KEYLSTDE.DLG added
+ *  120599 - LOGWINDE.DLG added
+ *  160599 - Popup menuitem added
+ *  170699 - Strings added
+ *  260699 - Strings added
+ *         - notebook ressource and header file included
+ *  130799 - IDS_ONTOP_MENU added
+ *  231199 - IDS_LAUNCH_PGPKEYS_FAILED and ID_POPUP_EXT added
+ *  051299 - IDS_PGPKEYS_EXE added
+ *  281299 - hint_de dialog included
+ *  150300 - IDM_TOGGLE_TITLEBAR added
+ *  200300 - Fix: IDM_TOGGLE_TITLEBAR was missing in ID_POPUP_EXT
+ *  290900 - main_de.dlg replaced by main_xx.dlg
+ *           IDS_PLEASE_RESTART, IDS_PLEASE_NOTE and
+ *           IDS_SHORT_MAIN_TITLE added
+ *  300900 - IDS_RUN_EDITOR_FAILED added
+ *  031000 - IDS_INIFILE_UPDATE_REQUIRED added
+ *  250101 - Copyright string updated,
+ *           some strings adapted to new German spell-checking
+ *  140602 - Copyright string updated
+ *
+ **********************************************************************/
+
+#include "pgptools.h"
+#include "main_xx.h"
+#include "about_xx.h"
+#include "prefnbxx.h"
+#include "filedlgx.h"
+#include "pphrasex.h"
+#include "keylstxx.h"
+#include "logwinxx.h"
+#include "hint_xx.h"
+
+STRINGTABLE
+BEGIN
+        IDS_MAIN_TITLE                  "PGPTools fÅr OS/2"
+        IDS_PREFERENCES_MENU            "~Einstellungen"
+        IDS_ABOUT_MENU                  "ö~ber"
+        IDS_ABOUT_TITLE                 "öber PGPTools"
+        IDS_ABOUT_TEXT2                 "Copyright (c) 1999-2003 by Bernd Giesen"
+        IDS_ABOUT_TEXT3                 "Alle Rechte vorbehalten."
+        IDS_PREF_TITLE                  "PGPTools Einstellungen"
+        IDS_PGPPATH_MISSING             "Die Umgebungsvariable 'PGPPATH' ist nicht gesetzt. Sie muss auf das aktuelle PGP-Verzeichnis verweisen. Programmabbruch!"
+        IDS_PUB_KEYFILE_NOT_EXIST       "Die angegebene Datei '%s' mit dem îffentlichen SchlÅsselring existiert nicht oder ist ungÅltig!"
+        IDS_PRIV_KEYFILE_NOT_EXIST      "Die angegebene Datei '%s' mit dem privaten SchlÅsselring existiert nicht oder ist ungÅltig!"
+        IDS_WARNING                     "Warnung"
+        IDS_CMDLINE_ERROR               "UngÅltige Kommandozeilenoption!"
+        IDS_SELECT_PUBKEY_TITLE         "ôffentlichen SchlÅsselring auswÑhlen"
+        IDS_SELECT_PRIVKEY_TITLE        "Privaten SchlÅsselring auswÑhlen"
+        IDS_SELECT_RANDSEED_TITLE       "Zufallszahlendatei auswÑhlen"
+        IDS_SELECT_SIGNDATA_TITLE       "Datei zum Unterschreiben auswÑhlen"
+        IDS_SELECT_ENCRYPTDATA_TITLE    "Datei zum VerschlÅsseln auswÑhlen"
+        IDS_SELECT_ENC_SIGNDATA_TITLE   "Datei zum Unterschreiben & VerschlÅsseln auswÑhlen"
+        IDS_SELECT_DECVERIFYDATA_TITLE  "Datei zum EntschlÅsseln/PrÅfen auswÑhlen"
+        IDS_INVALID_CLIPBOARD_DATA      "UngÅltige oder keine Daten in der Zwischenablage!"
+        IDS_NO_CLIPBOARD_ACCESS         "Zugriff auf Zwischenablage fehlgeschlagen!"
+        IDS_GENERAL_PROCESS_FAILURE     "Genereller Verarbeitungsfehler!"
+        IDS_ENTER_PASSPHRASE_WARNING    "Sie mÅssen eine gÅltige Passphrase eingeben!"
+        IDS_PGP_START_FAILED            "AusfÅhrung von PGP fehlgeschlagen!"
+        IDS_PGP_EXECUTION_FAILED        "AusfÅhrung von PGP fehlgeschlagen (haben Sie die korrekte Passphrase eingegeben?)"
+        IDS_SHOW_CLIPBRD_FAILED         "Fehler beim Laden der Zwischenablage!"
+        IDS_BUBBLE_SIGNDATA_HELP        "Unterschreiben"
+        IDS_BUBBLE_ENCRYPTDATA_HELP     "VerschlÅsseln"
+        IDS_BUBBLE_ENC_SIGNDATA_HELP    "VerschlÅsseln & unterschreiben"
+        IDS_BUBBLE_DECVERIFYDATA_HELP   "EntschlÅsseln/prÅfen"
+        IDS_BUBBLE_PGPKEYS_HELP         "PGPKeys aufrufen"
+        IDS_QUERY_TARGET_OVERWRITE      "Zieldatei '%s' existiert bereits. öberschreiben?"
+        IDS_SELECT_TARGETFILE_TITLE     "Zieldatei fÅr EntschlÅsselung auswÑhlen"
+        IDS_SELECT_FILE2CHECK_TITLE     "Datei auswÑhlen, zu der die Unterschrift gehîrt"
+        IDS_PGP_EXECUTION_SUCCEEDED     "PGP Operation wurde erfolgreich beendet."
+        IDS_HELP_TITLE                  "PGPTools fÅr OS/2 %s Hilfe"
+        IDS_NO_HELP_FOUND               "Hilfedatei nicht gefunden, keine Online-Hilfe verfÅgbar!"
+        IDS_ERROR_LOADING_HELP          "Fehler beim Laden der Hilfedatei!"
+        IDS_NO_HELP_AVAIL               "Zu diesem Thema ist keine Hilfe verfÅgbar!"
+        IDS_HELP_MENU                   "~Hilfe"
+        IDS_PGP_USER_ABORT              "PGP-Aktion wurde durch Benutzer abgebrochen!"
+        IDS_LAUNCH_PGPKEYS_FAILED       "Start von PGPKeys fehlgeschlagen!"
+        IDS_GENERAL_TAB                 "~Allgemein"
+        IDS_FILES_TAB                   "~Dateien"
+        IDS_ONTOP_MENU                  "~Immer im Vordergrund"
+        IDS_PGPKEYS_EXE                 "PGPKeys.exe de"
+        IDS_PLEASE_RESTART              "Sie mÅssen PGPTools fÅr OS/2 neu starten, damit die énderungen wirksam werden!"
+        IDS_PLEASE_NOTE                 "Hinweis"
+        IDS_SHORT_MAIN_TITLE            "PGPTools"
+        IDS_RUN_EDITOR_FAILED           "Das Starten des Editors ist fehlgeschlagen"
+        IDS_INIFILE_UPDATE_REQUIRED     "Die Initialisierungsdatei muss aktualisiert werden. Bitte ÅberprÅfen Sie die aktuellen Einstellungen und speichern Sie sie erneut ab!"
+END
+
+MENU    ID_POPUP
+{
+        MENUITEM "Zwischenablage ~unterschreiben", IDM_SIGN, MIS_TEXT
+        MENUITEM "Zwischenablage ~verschlÅsseln", IDM_ENCRYPT, MIS_TEXT
+        MENUITEM "Zwischenablage u~nterschreiben und verschlÅsseln", IDM_ENCRYPT_AND_SIGN, MIS_TEXT
+        MENUITEM "Zwischenablage ~entschlÅsseln oder prÅfen", IDM_DECRYPT_OR_VERIFY, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "~Zwischenablage leeren", IDM_EMPTY_CLIPBRD, MIS_TEXT
+        MENUITEM "Z~wischenablage anzeigen", IDM_SHOW_CLIPBRD, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "~Textausgabe", IDM_TEXTOUTPUT, MIS_TEXT
+        MENUITEM "~Separate Signatur", IDM_DETACHED, MIS_TEXT
+        MENUITEM "~ASCII SchutzhÅlle", IDM_ASCII_ARMOR, MIS_TEXT
+        MENUITEM "~Immer mit eigenem SchlÅssel verschlÅsseln", IDM_ENCRYPT_TO_SELF, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Titelzei~le an/aus", IDM_TOGGLE_TITLEBAR, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "PGPTools ~beenden\tAlt+F4", IDM_EXIT, MIS_TEXT
+}
+
+MENU    ID_POPUP_EXT
+{
+        MENUITEM "Zwischenablage ~unterschreiben", IDM_SIGN, MIS_TEXT
+        MENUITEM "Zwischenablage ~verschlÅsseln", IDM_ENCRYPT, MIS_TEXT
+        MENUITEM "Zwischenablage u~nterschreiben und verschlÅsseln", IDM_ENCRYPT_AND_SIGN, MIS_TEXT
+        MENUITEM "Zwischenablage ~entschlÅsseln oder prÅfen", IDM_DECRYPT_OR_VERIFY, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "~Zwischenablage leeren", IDM_EMPTY_CLIPBRD, MIS_TEXT
+        MENUITEM "Z~wischenablage anzeigen", IDM_SHOW_CLIPBRD, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "~Textausgabe", IDM_TEXTOUTPUT, MIS_TEXT
+        MENUITEM "~Separate Signatur", IDM_DETACHED, MIS_TEXT
+        MENUITEM "~ASCII SchutzhÅlle", IDM_ASCII_ARMOR, MIS_TEXT
+        MENUITEM "~Immer mit eigenem SchlÅssel verschlÅsseln", IDM_ENCRYPT_TO_SELF, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Titelzei~le an/aus", IDM_TOGGLE_TITLEBAR, MIS_TEXT
+        MENUITEM "~PGPKeys starten", IDM_LAUNCH_PGPKEYS, MIS_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "PGPTools ~beenden\tAlt+F4", IDM_EXIT, MIS_TEXT
+}
+
+
+RCINCLUDE "..\..\main_xx.dlg"
+RCINCLUDE "..\..\about_de.dlg"
+RCINCLUDE "..\..\prefnbde.dlg"
+RCINCLUDE "..\..\filedlgd.dlg"
+RCINCLUDE "..\..\pphrased.dlg"
+RCINCLUDE "..\..\keylstde.dlg"
+RCINCLUDE "..\..\logwinde.dlg"
+RCINCLUDE "..\..\hint_de.dlg"
+

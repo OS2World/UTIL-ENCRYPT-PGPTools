@@ -1,0 +1,22 @@
+; Name : PGPTOOLS.DEF
+
+NAME PGPTOOLS WINDOWAPI
+
+PROTMODE
+
+DESCRIPTION 'PGPTools for OS/2 (c) 1999-2003 Bernd Giesen'
+
+DATA MULTIPLE
+
+STACKSIZE 24576
+HEAPSIZE 16384
+
+EXPORTS MainDlgProc
+        AboutDlgProc
+        PrefDlgProc
+        PrefGeneralDlgProc
+        PrefFilesDlgProc
+        SrcSelDlgProc
+        TgtSelDlgProc
+
+
